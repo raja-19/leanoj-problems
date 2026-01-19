@@ -7,7 +7,7 @@ import Mathlib.Analysis.SpecialFunctions.Log.Base
 -- For all $ i \in \left\{1,2,\ldots,n - 1 \right\}$, there is a link from website $ i$ to $ i+1$.
 -- Prove that we can add less or equal than $ 3(n - 1)\log_{2}(\log_{2} n)$ links so that for all integers $ 1 \leq i < j \leq n$, starting with website $ i$, and using at most three links to website $ j$. (If we use a link, website's number should increase. For example, No.7 to 4 is impossible).
 
-def is_link(n:ℕ)(e:ℕ×ℕ):Prop:=1≤e.1∧e.1<e.2∧e.2≤n
+def is_link (n:ℕ)(e:ℕ×ℕ):Prop:=1≤e.1∧e.1<e.2∧e.2≤n
 def one_jump(L:Finset (ℕ×ℕ))(i:ℕ)(j:ℕ):Prop:=(i,j)∈L
 def two_jump(L:Finset (ℕ×ℕ))(i:ℕ)(j:ℕ):Prop:=∃k:ℕ,(i,k)∈L∧(k,j)∈L
 def three_jump(L:Finset (ℕ×ℕ))(i:ℕ)(j:ℕ):Prop:=∃k₁:ℕ,∃k₂:ℕ,(i,k₁)∈L∧(k₁,k₂)∈L∧(k₂,j)∈L
