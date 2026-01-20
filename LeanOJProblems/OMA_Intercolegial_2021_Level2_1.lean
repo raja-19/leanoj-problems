@@ -1,6 +1,6 @@
 import Mathlib.Analysis.RCLike.Basic
 
-def sol : ℝ := sorry
+def answer : ℝ := sorry
 
 noncomputable
 def List.Vector.mean (v : List.Vector ℝ 16) : ℝ :=
@@ -13,4 +13,4 @@ def List.Vector.modify (v : List.Vector ℝ 16) : List.Vector ℝ 16 :=
     else
       v.get i + 10
 
-lemma valid : ∀ v : List.Vector ℝ 16, v.mean = 168 → (v.modify).mean = sol := sorry
+theorem solution : ∀ v : List.Vector ℝ 16, v.mean = 168 → (v.modify).mean = answer := sorry
